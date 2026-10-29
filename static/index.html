@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Traffic Congestion Predictor</title>
+    <meta name="description" content="Premium machine learning application for air traffic congestion prediction.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="glow-text">Air Traffic Congestion Predictor</h1>
+            <p>Advanced predictive analytics for passenger volumes & terminal operations.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="glass-panel form-container">
+                <h2>Flight Parameters</h2>
+                <form id="prediction-form">
+                    <div class="input-group">
+                        <label for="year">Year</label>
+                        <select id="year" name="year" required>
+                            <option value="2026">2026</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="month">Month</label>
+                        <select id="month" name="month" required>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="terminal">Terminal</label>
+                        <select id="terminal" name="terminal" required>
+                            <option value="Terminal 1">Terminal 1</option>
+                            <option value="Terminal 2">Terminal 2</option>
+                            <option value="Terminal 3">Terminal 3</option>
+                            <option value="International">International</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="region">GEO Region</label>
+                        <select id="region" name="region" required>
+                            <option value="US">US</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Central America">Central America</option>
+                            <option value="Middle East">Middle East</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="activity">Activity Type</label>
+                        <select id="activity" name="activity" required>
+                            <option value="Enplaned">Enplaned</option>
+                            <option value="Deplaned">Deplaned</option>
+                            <option value="Thru / Transit">Thru / Transit</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Predict Congestion</button>
+                </form>
+            </div>
+
+            <div class="glass-panel result-container" id="result-box" style="display: none;">
+                <div class="result-header">
+                    <h2>Prediction Results</h2>
+                </div>
+                <div class="result-body">
+                    <div class="passenger-count">
+                        <span id="pred-passengers">0</span>
+                        <p class="subtitle">Estimated Passengers</p>
+                    </div>
+                    
+                    <div class="congestion-indicator" id="congestion-status">
+                        <h3>Congestion Level</h3>
+                        <div class="status-badge" id="status-badge">Unknown</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

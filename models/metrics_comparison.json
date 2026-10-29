@@ -1,0 +1,38 @@
+{
+  "Linear Regression": {
+    "MAE": 5.33,
+    "RMSE": 6.91,
+    "R2": 0.8973,
+    "Accuracy": 77.86,
+    "Macro_F1": 77.71,
+    "Precision": 78.97,
+    "Recall": 77.74
+  },
+  "Random Forest": {
+    "MAE": 4.45,
+    "RMSE": 6.21,
+    "R2": 0.917,
+    "Accuracy": 80.11,
+    "Macro_F1": 79.81,
+    "Precision": 80.51,
+    "Recall": 79.86
+  },
+  "GRU": {
+    "MAE": 4.25,
+    "RMSE": 5.81,
+    "R2": 0.9273,
+    "Accuracy": 78.41,
+    "Macro_F1": 77.69,
+    "Precision": 78.94,
+    "Recall": 77.69
+  },
+  "LSTM (Proposed)": {
+    "MAE": 4.65,
+    "RMSE": 6.23,
+    "R2": 0.9164,
+    "Accuracy": 78.44,
+    "Macro_F1": 77.58,
+    "Precision": 78.92,
+    "Recall": 77.59
+  }
+}
